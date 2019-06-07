@@ -1,0 +1,16 @@
+1 ) For the equals method, the running time is order of n, or is O(n). This is
+because the worst case scenario is when the lists have equal elements, but are
+rotated away from each other (ie 1, 2, 3 and 2, 3, 1). When we have this situation,
+the original list's head is compared to the elements of the other list n times,
+and when the original head finally equals an element of the other list, the elements
+of both lists are compared and this happens n times. This gives us
+approximately 2n operations, which gives us a complexity of O(n).
+
+
+2 ) The complexity of the removeDuplicates method is O(n^2).
+The worst case scenario is when the list has no duplicates.
+The outer loop, which increments what element is being compared to the rest
+of the list, runs n-1 times, and the inner loop, which compares each element
+to the rest of the list, runs n-1, n-2, ... 2, 1 times, which is O(n^2).
+Since we have an outer loop running O(n), and an inner loop running
+O(n^2), the algorithm has a total complexity of O(n^2).
